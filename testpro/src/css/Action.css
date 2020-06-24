@@ -1,0 +1,49 @@
+.Action {
+  position: absolute;
+  top: 15%;
+  width: 700px;
+  opacity: 0.9;
+  z-index: 1;
+  background-color: darkred;
+  display: block;
+  right: 0%;
+}
+.sel {
+  position: initial;
+  background-color: white;
+  opacity: 1;
+  width: 97%;
+  margin: 10px;
+  display: block;
+}
+.option {
+  background-color: white;
+  opacity: 1;
+  width: 97%;
+  margin: 10px;
+  height: inherit;
+}
+.icons {
+  display: flex;
+  justify-content: space-around;
+}
+.icons svg {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+}
+
+.lists {
+  border: 2px solid skyblue;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  padding: 6px 12px;
+  opacity: 0.9;
+  border-radius: 5px;
+  margin: 8px;
+  height: 50px;
+}
+.table{
+  margin: 0px 25px;
+}
+
