@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Axios from "axios";
 import "../css/Gilcuchen.css";
 
-const Gilcuchun = dong => {
+const Gilcuchun = (dong) => {
   const [list, setList] = useState();
   const [dong1, setDong] = useState();
   const [first, setFirst] = useState("");
@@ -17,6 +17,7 @@ const Gilcuchun = dong => {
     try {
       await Axios.post("/api/gil", post).then(async function (res) {
         await setList(res.data);
+        console.log(res.data);
         return res.data;
       });
     } catch (error) {
@@ -55,14 +56,14 @@ const Gilcuchun = dong => {
           </div>
           <div class="gname">
             <p>길 이름</p>
-            {list.map(i => (
+            {list.map((i) => (
               <p key={i.gil}> {i.gil}</p>
             ))}
           </div>
           <div className="avg">
-            <p>평균 매출</p>
-            {list.map(i => (
-              <p key={i.gil}> {parseInt(i.avg평균매출)}</p>
+            <p>평균 매출 비율</p>
+            {list.map((i) => (
+              <p key={i.gil}> {parseInt(i.coffee평균매출)}%</p>
             ))}
           </div>
         </div>
