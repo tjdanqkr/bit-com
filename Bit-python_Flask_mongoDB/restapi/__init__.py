@@ -160,7 +160,7 @@ def gilcucheon():
         avg = (float(my_doc[i]["분식전문점"]) + float(my_doc[i]["안경"]) + float(my_doc[i]["일식음식점"]) + float(my_doc[i]["제과점"])
                + float(my_doc[i]["패스트푸드점"]) + float(my_doc[i]["편의점"]) + float(my_doc[i]["한식음식점"]) + float(
                     my_doc[i]["호프-간이주점"]) + float(my_doc[i]["화장품"])) / 9
-        coffeeavg = avg / (float(my_doc[i]["커피-음료"]))
+        coffeeavg =  (float(my_doc[i]["커피-음료"]))/avg *100
 
         b = {"gil": gil, "avg평균매출": avg, "coffee평균매출": coffeeavg}
         c.append(b)
