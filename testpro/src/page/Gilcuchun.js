@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Axios from "axios";
 import "../css/Gilcuchen.css";
 
-const Gilcuchun = (dong) => {
+const Gilcuchun = dong => {
   const [list, setList] = useState();
   const [dong1, setDong] = useState();
   const [first, setFirst] = useState("");
@@ -56,13 +56,13 @@ const Gilcuchun = (dong) => {
           </div>
           <div class="gname">
             <p>길 이름</p>
-            {list.map((i) => (
+            {list.map(i => (
               <p key={i.gil}> {i.gil}</p>
             ))}
           </div>
           <div className="avg">
-            <p>평균 매출 비율</p>
-            {list.map((i) => (
+            <p>가중 평균 매출 대비 커피 매출 비율</p>
+            {list.map(i => (
               <p key={i.gil}> {parseInt(i.coffee평균매출)}%</p>
             ))}
           </div>

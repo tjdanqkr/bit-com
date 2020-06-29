@@ -167,14 +167,14 @@ def gilcucheon():
 
     for i in range(len(c)):
         for j in range(len(c) - 1):
-            if (float(c[i]['coffee평균매출']) > float(c[j]['coffee평균매출'])):
+            if (float(c[i]['coffee평균매출']) < float(c[j]['coffee평균매출'])):
                 print(i, j)
                 print(float(c[i]['coffee평균매출']), float(c[j]['coffee평균매출']))
                 c[i]["gil"], c[j]["gil"] = c[j]["gil"], c[i]["gil"]
                 c[i]["avg평균매출"], c[j]["avg평균매출"] = c[j]["avg평균매출"], c[i]["avg평균매출"]
                 c[i]["coffee평균매출"], c[j]["coffee평균매출"] = c[j]["coffee평균매출"], c[i]["coffee평균매출"]
 
-            elif (float(c[i]['coffee평균매출']) >= float(c[j]['coffee평균매출'])):
+            elif (float(c[i]['coffee평균매출']) <= float(c[j]['coffee평균매출'])):
                 continue
 
     a = []

@@ -5,7 +5,7 @@ import "../css/Biyongop.css";
 //     float:left;
 // }`);
 
-const Biyongop = (dong) => {
+const Biyongop = dong => {
   const [json1, setJson1] = useState();
   const [ma2019, setMa2019] = useState("");
   const [ma2020, setMa2020] = useState("");
@@ -32,7 +32,7 @@ const Biyongop = (dong) => {
       }
     }
   }
-  const gilst = async (e) => {
+  const gilst = async e => {
     await b(e.target.value);
   };
 
@@ -42,7 +42,7 @@ const Biyongop = (dong) => {
       dong: dong.dong,
     };
     try {
-      await Axios.post("/api/biyong1", post).then(async (res) => {
+      await Axios.post("/api/biyong1", post).then(async res => {
         await setJson1(res.data);
         console.log(res.data);
       });
@@ -64,7 +64,7 @@ const Biyongop = (dong) => {
               <div>
                 <select onClick={gilst} className="lists">
                   <option></option>
-                  {json1.map((gil) => {
+                  {json1.map(gil => {
                     return (
                       <option key={gil.gil} value={gil.gil}>
                         {gil.gil}
@@ -88,7 +88,7 @@ const Biyongop = (dong) => {
                     <p>{bi + "원"}</p>
                   </div>
                   <div className="su">
-                    <p>수입률 예측: {parseInt(ma2020 / 12 / bi1)} %</p>
+                    <p>수입률 예측: {parseInt((ma2020 * 12) / bi1)} %</p>
                   </div>
                   <div className="son">
                     <p>손익 분기 점: {bi12} 원</p>
